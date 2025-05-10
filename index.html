@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">Coffee Shop</div>
+        <nav>
+            <ul class="sidebar">
+                <li class="close-button" onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                            height="32px" viewBox="0 -960 960 960" width="32px" fill="#000000">
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg></a></li>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Skills</a></li>
+                <li><a href="#review">Projects</a></li>
+                <li><a href="#locations">Contact</a></li>
+            </ul>
+            <ul>
+                <li class="hideOnMobile"><a href="#hero">Home</a></li>
+                <li class="hideOnMobile"><a href="#about">About</a></li>
+                <li class="hideOnMobile"><a href="#menu">Skills</a></li>
+                <li class="hideOnMobile"><a href="#review">Projects</a></li>
+                <li class="hideOnMobile"><a href="#locations">Contact</a></li>
+                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                            height="30px" viewBox="0 -960 960 960" width="30px" fill="#000000">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                        </svg></a></li>
+            </ul>
+        </nav>
+        <a href="#menu" class="cta">Order Now</a>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Wake Up and Smell the Coffee</h1>
+            <a href="#menu" class="cta">See Our Menu</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <img src="images/5.jpeg" alt="About Us">
+        <div class="about-text">
+            <h2>About Us</h2>
+            <p>Welcome to our coffee shop. Learn about our journey and mission Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Saepe numquam ab asperiores nemo aspernatur corrupti tempore quasi culpa, facilis
+                aliquam ipsum earum cum est. Et tempora laboriosam quisquam cum placeat, eos incidunt, fugiat dolorum
+                veritatis expedita ipsa nemo facilis minus repudiandae ratione laborum neque! Unde tenetur laudantium
+                corrupti exercitationem earum in nihil beatae maxime, cum nobis numquam laborum laboriosam mollitia
+                natus voluptatem. Autem illo sit, molestiae sint labore vitae quo ut quam tempora tenetur ipsum
+                assumenda officia  </p>
+            <button class="cta">Learn More</button>
+        </div>
+    </section>
+
+    <section id="menu" class="menu">
+        <h2 class="menu-heading">Our Favorites</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img class="img-item" src="images/I Love Coffee  - Descubra os benefícios do café.jpeg" alt="Latte">
+                <h3>Latte</h3>
+                <p>A classic latte with smooth foam.</p>
+            </div>
+            <div class="menu-item">
+                <img class="img-item" src="images/I Love Coffee  - Descubra os benefícios do café.jpeg" alt="Cappuccino">
+                <h3>Cappuccino</h3>
+                <p>Rich and creamy cappuccino.</p>
+            </div>
+            <div class="menu-item">
+                <img class="img-item" src="images/I Love Coffee  - Descubra os benefícios do café.jpeg" alt="Latte">
+                <h3>Latte</h3>
+                <p>A classic latte with smooth foam.</p>
+            </div>
+            <div class="menu-item">
+                <img class="img-item" src="images/I Love Coffee  - Descubra os benefícios do café.jpeg" alt="Cappuccino">
+                <h3>Cappuccino</h3>
+                <p>Rich and creamy cappuccino.</p>
+            </div>
+            <!-- More menu items -->
+        </div>
+        <button class="cta">View Full Menu</button>
+    </section>
+
+    <section id="review">
+        <h2>Special Offers</h2>
+        <div class="offers">
+            <div class="offer">
+                <h3>Summer Special</h3>
+                <p>Enjoy a refreshing iced coffee at a discount.</p>
+                <button class="cta" onclick="openModal()">Learn More</button>
+            </div>
+        </div>
+        <h2>What Our Customers Say</h2>
+        <figure class="customer">
+            <figcaption>
+                <blockquote>
+                    <p>If you do the job badly enough, sometimes you don't get asked to do it again.</p>
+                </blockquote>
+                <h3>Wisteria Ravenclaw</h3>
+                <h4>Google Inc.</h4>
+            </figcaption>
+        </figure>
+        <figure class="customer">
+            <figcaption>
+                <blockquote>
+                    <p>I'm killing time while I wait for life to shower me with meaning and happiness.</p>
+                </blockquote>
+                <h3>Ursula Gurnmeister</h3>
+                <h4>Facebook</h4>
+            </figcaption>
+        </figure>
+        <figure class="customer">
+            <figcaption>
+                <blockquote>
+                    <p>The only skills I have the patience to learn are those that have no real application in life.
+                    </p>
+                </blockquote>
+                <h3>Ingredia Nutrisha</h3>
+                <h4>Twitter</h4>
+            </figcaption>
+        </figure>
+    </section>
+
+    <section id="locations">
+        <div class="disc">
+            <div class="contact-form-container">
+                <h2>Contact Us</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" required>
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+            <div class="loc">
+                <h2>Our Locations</h2>
+                <div id="map"></div>
+                <div class="location-details">
+                    <p>123 Coffee St, Coffee City</p>
+                    <p>(123) 456-7890</p>
+                    <p>Mon-Fri: 7am - 7pm</p>
+                </div>
+                <button class="cta">Get Directions</button>
+
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter for the latest news and offers.</p>
+                <form id="newsletter-form" onsubmit="validateForm(event)">
+                    <input type="email" id="email" placeholder="Enter your email">
+                    <button type="submit" class="cta">Subscribe</button>
+                </form>
+    </section>
+    </div>
+    </div>
+    <div class="footer1">
+        <p class="copyright">© 2024 Coffee Shop Name. All rights reserved.</p>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
